@@ -1,0 +1,8 @@
+/* CSS Document */
+@import "compass/reset";
+@import "_partials/mixins";
+@import "_partials/typography";
+	
+	.jumbotron {
+		background-image: url(../images/Background.jpg);
+}
