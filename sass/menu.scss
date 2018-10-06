@@ -1,0 +1,64 @@
+@import "compass";
+@font-face {
+  font-family: "NexaScript-Heavy";
+  src: url("../fonts/NexaScriptHeavy/NexaScriptHeavy.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/NexaScriptHeavy/NexaScriptHeavy.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("../fonts/NexaScriptHeavy/NexaScriptHeavy.otf") format("opentype"), /* Open Type Font */
+    url("../fonts/NexaScriptHeavy/NexaScriptHeavy.svg") format("svg"), /* Legacy iOS */
+    url("../fonts/NexaScriptHeavy/NexaScriptHeavy.ttf") format("truetype"), /* Safari, Android, iOS */
+    url("../fonts/NexaScriptHeavy/NexaScriptHeavy.woff") format("woff"), /* Modern Browsers */
+    url("../fonts/NexaScriptHeavy/NexaScriptHeavy.woff2") format("woff2"); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'Bernhard script';
+    src: url('Bernhardscript.eot');
+    src: local('Bernhard script'), local('BernhardscriptC'),
+        url('../fonts/Bernhardscript.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Bernhardscript.woff2') format('woff2'),
+        url('../fonts/Bernhardscript.woff') format('woff'),
+        url('../fonts/Bernhardscript.svg#Bernhardscript') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+p {font-size: 1rem; font-family: 'Times New Roman',serif;}
+$headtext: "NexaScript-Heavy";
+$secheadt: 'Bernhard script';
+$goluboi: #21cce6;
+$roxmyag: #FF826B;
+header {
+	background-image: url(../images/bgbanket_head.jpg);
+	background-size: cover;
+	max-width: 1400px;
+	width: 100%;
+	height: auto;
+	color: $goluboi;
+	
+	h1 {
+		padding-top: 3rem;
+		padding-bottom: 1rem;
+		font-family: $headtext;
+		font-size: 3.3rem;
+	}
+	h2 {
+		padding-bottom: 2rem;
+		font-family: $secheadt;
+		font-size: 2.7rem;
+		color: $roxmyag;
+		font-weight: bold;
+		@include text-shadow( -2px 1px 0 #3F51B5);
+	}
+}
+.banket_wrapper {margin-bottom: 3rem; border: solid 5px #577DA9;border-radius: 15px;padding: 1rem;background-image: url(../images/bgbanket1.jpg);background-size: cover;}
+.tab-content 
+h2 {font-family: $headtext;color: $roxmyag;}
+p{text-align: left;}
+table {
+	width: 100%;
+	th {font-size: 1.8rem; text-align: center; font-family: $headtext;}
+}
+.nazv {width: 80%; color: #161818;text-align: left;font-family: 'Times New Roman',serif;font-size: 1.2rem;}
+.ves {text-align: right;color: coral;font-weight: bolder;}
+.nav-item {color: blueviolet;
+    font-weight: bold;}

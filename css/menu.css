@@ -1,0 +1,88 @@
+@font-face {
+  font-family: "NexaScript-Heavy";
+  src: url("../fonts/NexaScriptHeavy/NexaScriptHeavy.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/NexaScriptHeavy/NexaScriptHeavy.eot?#iefix") format("embedded-opentype"), url("../fonts/NexaScriptHeavy/NexaScriptHeavy.otf") format("opentype"), url("../fonts/NexaScriptHeavy/NexaScriptHeavy.svg") format("svg"), url("../fonts/NexaScriptHeavy/NexaScriptHeavy.ttf") format("truetype"), url("../fonts/NexaScriptHeavy/NexaScriptHeavy.woff") format("woff"), url("../fonts/NexaScriptHeavy/NexaScriptHeavy.woff2") format("woff2");
+  /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Bernhard script';
+  src: url("Bernhardscript.eot");
+  src: local("Bernhard script"), local("BernhardscriptC"), url("../fonts/Bernhardscript.eot?#iefix") format("embedded-opentype"), url("../fonts/Bernhardscript.woff2") format("woff2"), url("../fonts/Bernhardscript.woff") format("woff"), url("../fonts/Bernhardscript.svg#Bernhardscript") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* line 25, ../sass/menu.scss */
+p {
+  font-size: 1rem;
+  font-family: 'Times New Roman',serif; }
+
+/* line 30, ../sass/menu.scss */
+header {
+  background-image: url(../images/bgbanket_head.jpg);
+  background-size: cover;
+  max-width: 1400px;
+  width: 100%;
+  height: auto;
+  color: #21cce6; }
+  /* line 38, ../sass/menu.scss */
+  header h1 {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    font-family: "NexaScript-Heavy";
+    font-size: 3.3rem; }
+  /* line 44, ../sass/menu.scss */
+  header h2 {
+    padding-bottom: 2rem;
+    font-family: "Bernhard script";
+    font-size: 2.7rem;
+    color: #FF826B;
+    font-weight: bold;
+    text-shadow: -2px 1px 0 #3F51B5; }
+
+/* line 53, ../sass/menu.scss */
+.banket_wrapper {
+  margin-bottom: 3rem;
+  border: solid 5px #577DA9;
+  border-radius: 15px;
+  padding: 1rem;
+  background-image: url(../images/bgbanket1.jpg);
+  background-size: cover; }
+
+/* line 54, ../sass/menu.scss */
+.tab-content
+h2 {
+  font-family: "NexaScript-Heavy";
+  color: #FF826B; }
+
+/* line 56, ../sass/menu.scss */
+p {
+  text-align: left; }
+
+/* line 57, ../sass/menu.scss */
+table {
+  width: 100%; }
+  /* line 59, ../sass/menu.scss */
+  table th {
+    font-size: 1.8rem;
+    text-align: center;
+    font-family: "NexaScript-Heavy"; }
+
+/* line 61, ../sass/menu.scss */
+.nazv {
+  width: 80%;
+  color: #161818;
+  text-align: left;
+  font-family: 'Times New Roman',serif;
+  font-size: 1.2rem; }
+
+/* line 62, ../sass/menu.scss */
+.ves {
+  text-align: right;
+  color: coral;
+  font-weight: bolder; }
+
+/* line 63, ../sass/menu.scss */
+.nav-item {
+  color: blueviolet;
+  font-weight: bold; }

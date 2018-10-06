@@ -1,8 +1,369 @@
-/* CSS Document */
-@import "compass/reset";
+@import "compass";
 @import "_partials/mixins";
 @import "_partials/typography";
+//@import "anim.scss";
+
+.wrapper {
+  position: absolute;
+	left: 0;
+	right: 0;
+	margin-top: 3rem;
+	h1 {@include font-decor{
+		font-size: 5vw;
+		font-family: 'yeseva-one';
+		}
+		span {
+		color: $hedcolsec;
+		
+		font-size: 4vw;}
+	}
+	h2 {@include font-decor{
+		font-family: $hedsectext;
+		}
+		margin-top: 2rem;
+    	font-size: 5vw;
+	}
+}
+span.akcentname {
+	color: $hedcolsec;
+}
+.wrapper span:before, .wrapper span:after {
+				content: url(../images/svg/venzel.svg);
+				width: 8vw;
+				height: auto;
+				display: inline-block; 
+			}
+#particles-js {
+  margin: 0 auto;
+  background-image: url(../images/heder4var1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.logo{
+	width: 100%;
+	height: auto;
+	@include animation(spiner, 6s, ease, infinite);
 	
-	.jumbotron {
-		background-image: url(../images/Background.jpg);
+}
+article {
+	background-image: url(../images/png/bg_venz.png);
+	background-repeat: repeat;
+	background-attachment: fixed;
+	p {
+		font-size: 1.3rem;
+    	line-height: 1.2rem;
+    	text-align: left;
+	}
+}
+/*Paralax cards*/
+.cols{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cardscontainer{
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
+	        perspective: 1000px;
+	padding-bottom: 1rem;
+}
+
+.front,
+.back{
+  background-size: cover;
+	background-position: center;
+	-webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+	text-align: center;
+	min-height: 225px;
+	max-width: 225px;
+	height: auto;
+	border-radius: 10px;
+	color: $goluboi;
+	@include text-shadow(-2px, 1px, 0,$temnogolub);
+	h3{
+		font-size: 1.3rem;
+		line-height: 1rem;
+	}
+}
+
+.back{
+  background: #cedce7;
+  background: -webkit-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: -o-linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+  background: linear-gradient(45deg,  #cedce7 0%,#596a72 100%);
+}
+
+.front:after{
+	position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    content: '';
+    display: block;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    border-radius: 10px;
+}
+.cardscontainer:hover .front,
+.cardscontainer:hover .back{
+    -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.inner{
+    -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
+            transform: translateY(-50%) translateZ(60px) scale(0.94);
+    top: 50%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    outline: 1px solid transparent;
+    -webkit-perspective: inherit;
+            perspective: inherit;
+    z-index: 2;
+	ul {
+		line-height: 1rem;
+		padding-left: 1rem;
+	}
+}
+
+.cardscontainer .back{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.cardscontainer .front{
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    -webkit-transform-style: preserve-3d;
+            transform-style: preserve-3d;
+}
+
+.cardscontainer:hover .back{
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.cardscontainer:hover .front{
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.front .inner p{
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.front .inner p:after{
+  content: '';
+  width: 4rem;
+  height: 2px;
+  position: absolute;
+  background: #C6D4DF;
+  display: block;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -.75rem;
+}
+.podarki {
+    background-image: url(../images/bgpresent.jpg);
+	background-size: cover;
+	background-position: top center;
+	border-top: 5px solid #673AB7;
+	h3 {
+		color: $hedcolsec;
+		font-size: 5.4vw;
+		font-family: $hedsectext;
+		font-weight: bold;
+    	line-height: 2.5rem;
+	}
+	p {
+		font-size: x-large;
+		color: #e581f6;
+    	@include text-shadow(-1px, 1px, 0, rgba(19, 0, 53, 1));
+	}
+	img {
+		border: 8px ridge #cee1ea;
+		max-width: 400px;
+	}
+	span {
+		color: $fiolet;
+	}
+}
+.gril {
+	background-image: url(../images/grill.jpg);
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 18rem;
+	h3 {
+		@include font-decor-d;
+	}
+}
+.menupred {
+	background-image: url(../images/gril2.jpg);
+	width: 100%;
+	height: auto;
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 18rem;
+	h3 {
+		@include font-decor-d;
+	}
+}
+.menbg {
+	background-color: rgba(218,185,135,0.59);
+	margin-right: 1rem;
+	margin-left: 1rem;
+	border-radius: 25px;
+	padding-bottom: 0.8rem;
+}
+footer {
+	background-image: url(../images/restfooter.jpg);
+	width: 100%;
+	height: auto;
+	color: antiquewhite;
+	i {padding-right: 0.7rem;color: $akyel;}
+}
+.tab_container .tab-content p,
+.tab_container .tab-content h3 {
+  -webkit-animation: fadeInScale 0.7s ease-in-out;
+  -moz-animation: fadeInScale 0.7s ease-in-out;
+  animation: fadeInScale 0.7s ease-in-out;
+}
+.tab_container .tab-content h3  {
+  text-align: center;
+}
+
+.tab_container [id^="tab"]:checked + label {
+  background: #AFDBE6;
+  box-shadow: inset 0 3px #0CE;
+}
+
+.tab_container [id^="tab"]:checked + label .fa {
+  color: #0CE;
+}
+
+label .fa {
+  font-size: 1rem;
+  margin: 0 1rem 0 0;
+  padding-right: 15px;
+}
+
+/*Media query*/
+@media only screen and (max-width: 930px) {
+  label span {
+    font-size: 14px;
+  }
+  label .fa {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  label span {
+    display: none;
+  }
+
+  label .fa {
+    font-size: 16px;
+  }
+
+  .tab_container {
+    width: 98%;
+  }
+}
+
+/*Content Animation*/
+@keyframes fadeInScale {
+  0% {
+  	transform: scale(0.9);
+  	opacity: 0;
+  }
+  
+  100% {
+  	transform: scale(1);
+  	opacity: 1;
+  }
+}
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5 {
+  display: block;
+  padding: 20px;
+  background: #9DD8D7;
+  color: #050821;
+  border-bottom: 2px solid $fiolet;
+}
+/*Fun begins*/
+.tab_container {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 1rem;
+	position: relative;
+}
+
+input, section {
+  clear: both;
+  padding-top: 10px;
+  display: none;
+}
+
+label {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: block;
+  float: left;
+  width: 25%;
+  padding: 0.6rem;
+  color: $fiolet;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  background: $goluboi;
+  min-height: 5rem;
+}
+#carouselExampleControls {
+	 border:3px solid #d6875a;
+	@include border-radius(15px);
 }
